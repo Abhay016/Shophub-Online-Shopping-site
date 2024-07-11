@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import Card from './Card';
@@ -6,7 +6,6 @@ import products from '../Assets/products';
 
 const responsive = {
   superLargeDesktop: {
-    // the naming can be any, depends on you.
     breakpoint: { max: 4000, min: 3000 },
     items: 5
   },

@@ -13,3 +13,10 @@ footer a:hover {
     color: #ccc;
     cursor: pointer;
 }
+
+.footer_container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 40px;
+}
