@@ -10,8 +10,8 @@ const WomenPage = () => {
         <>
             <CustomCarousel images={womenProducts} />
             <div className="w-full">
-                <div className="bg-gray-100 min-h-screen py10">
-                    <ProductListing />
+                <div className="bg-slate-800 min-h-screen py10">
+                    <ProductListing category="Womens"/>
                 </div>
             </div>
         </>

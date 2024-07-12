@@ -12,7 +12,7 @@ const CustomCarousel = ({ images }) => {
         </Carousel.Item>
       ))}
     </Carousel>
-    <p className='para'>ShopHub Sale is here! Get upto 60% upto + Extra Rs.1500/- Off on order value of Rs.5999/-. <b>Use Code: Sale1500</b></p>
+    <p className='para mb-0'>ShopHub Sale is here! Get upto 60% upto + Extra Rs.1500/- Off on order value of Rs.5999/-. <b>Use Code: Sale1500</b></p>
     </div>
   );
 };

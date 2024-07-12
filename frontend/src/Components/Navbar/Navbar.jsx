@@ -17,12 +17,12 @@ const Navbar = () => {
         <div className='navbar'  style={{ '--bs-navbar-padding-y': '0' }}>
             <div className='main-navbar'>
                 <div className='app-logo'>
-                    <img src={logo} alt="" />
+                    <img src={logo}  alt="" />
                     <p>ShopHub</p>
                 </div>
                 <div className='search'>
                     <div className='search-box'>
-                        <input placeholder='Search Your Products, Brands and more'/>
+                        <input className='pl-4' placeholder='Search Your Products, Brands and more'/>
                     </div>
                     <div className='search-image'>
                         <a href='#'><img src={search_icon} alt="" /></a>    
@@ -36,10 +36,10 @@ const Navbar = () => {
                 </div>
                 {localStorage.getItem('auth-token')?
                 <div className='login' >
-                    <div className='login-para' onClick={()=>{localStorage.removeItem('auth-token');window.location.replace('/')}}><Link style={{textDecoration: 'none', color: 'black', fontWeight: '450'}} to='/loginsignup'>Logout</Link></div>
+                    <div className='login-para' onClick={()=>{localStorage.removeItem('auth-token');window.location.replace('/')}}><Link style={{textDecoration: 'none', color: 'black', fontWeight: '600'}} to='/loginsignup'>Logout</Link></div>
                 </div>:
                  <div className='login' >
-                 <div className='login-para'><Link style={{textDecoration: 'none', color: 'black', fontWeight: '450'}} to='/loginsignup'>Login</Link></div></div>}   
+                 <div className='login-para'><Link style={{textDecoration: 'none', color: 'black', fontWeight: '600'}} to='/loginsignup'>Login</Link></div></div>}   
             </div>
             <div className='another-navbar'>
                 <ul>

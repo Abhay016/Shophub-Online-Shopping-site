@@ -8,18 +8,18 @@ const CartItems = () => {
 
   return (
     <div className="container mx-auto p-4">
-      <div className="grid grid-cols-5 gap-4 mb-4 text-center font-bold">
+      <div className="grid grid-cols-5 gap-4 mb-4 text-center font-bold text-white">
         <p>Products</p>
         <p>Title</p>
         <p>Price</p>
         <p>Quantity</p>
         <p>Total Amount</p>
       </div>
-      <hr className="mb-4" />
+      <hr className="mb-4 bg-white h-1" />
       {all_products.map((e) => {
         if (cartItems[e.id] > 0) {
           return (
-            <div key={e.id} className="mb-4">
+            <div key={e.id} className="mb-4 text-white">
               <div className="grid grid-cols-5 gap-4 items-center text-center">
                 <Link className='m-10' to='/product'>
                   <img src={e.image} alt={e.name} className="w-20 h-20 object-contain" />
@@ -27,8 +27,8 @@ const CartItems = () => {
                 <p>{e.name}</p>
                 <p>₹{e.new_price ? e.new_price : 'N/A'}</p>
                 <div>
-                  <button className="btn btn-outline-danger !border-r-0 !rounded-r-none" onClick={() => removeFromCart(e.id)}>-</button>
-                  <button className="btn btn-outline-secondary !border-r-0 !border-l-0 !rounded-none">{cartItems[e.id]}</button>
+                  <button className="btn btn-outline-danger !border-r-0 !rounded-r-none " onClick={() => removeFromCart(e.id)}>-</button>
+                  <button className="btn btn-outline-secondary !border-r-0 !border-l-0 !rounded-none text-white">{cartItems[e.id]}</button>
                   <button className="btn btn-outline-success !border-l-0 !rounded-l-none" onClick={() => addToCart(e.id)}>+</button>
                 </div>
                 <p>₹{e.new_price && cartItems[e.id] ? e.new_price * cartItems[e.id] : 'N/A'}</p>
@@ -58,7 +58,7 @@ const CartItems = () => {
               <h3>₹{getTotalCartAmount()}</h3>
             </div>
           </div>
-          <button className="btn btn-primary w-full">Proceed to Checkout</button>
+          <button className="btn btn-primary w-full">Proceed to Buy</button>
         </div>
         <div className="bg-gray-100 p-4 rounded shadow-md w-1/2">
           <p className="mb-4">If you have a Promo code, enter it here:</p>

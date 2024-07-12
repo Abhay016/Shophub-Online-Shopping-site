@@ -83,7 +83,7 @@ const LoginSignup = () => {
         }
     } 
     return (
-        <div className="main_container flex items-center justify-center min-h-screen bg-gray-100">
+        <div className="main_container flex items-center justify-center min-h-screen bg-slate-800">
             <div className="login-container w-full max-w-md p-8 space-y-6 rounded-lg shadow-md">
                 <h1 className="text-2xl font-bold text-center">{state}</h1>
                 {/* {error && <div className="p-4 mb-4 text-sm text-red-700 bg-red-100 rounded-lg">{error}</div>}

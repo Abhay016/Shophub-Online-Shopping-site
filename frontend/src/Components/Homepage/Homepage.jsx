@@ -8,8 +8,8 @@ const HomePage = () => {
     return (
         <div>
             <CustomCarousel images={banner}/>
-            <div className="bg-gray-200 min-h-screen !mt-0 mb-0">
-                <ProductListing/>
+            <div className="bg-slate-900 min-h-screen !mt-0 mb-0">
+                <ProductListing category="Home"/>
                 <NewsLetter/>
             </div>
 

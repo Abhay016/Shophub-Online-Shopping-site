@@ -60,7 +60,6 @@ const products = {
       {image: banner_kids2},
       {image: banner_kids5},
       {image: banner7},
-      {image: banner1},
     ],
     newArrivals: [
         {image: banner_collection2},
