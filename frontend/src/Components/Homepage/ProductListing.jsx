@@ -76,7 +76,7 @@ const ProductListing = ({category}) => {
     return (
       <Container className="mt-0 mb-0 pt-8 pb-8">
         <h2 className="text-center mb-4 italic text-white">Top Trending</h2>
-        <ProductCarousel category="Top Trending Kids" />
+        <ProductCarousel category="Best Deals" />
         <br/>
         <hr className='bg-white h-1'/>
         <br/>
