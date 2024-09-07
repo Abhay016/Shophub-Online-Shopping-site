@@ -234,7 +234,7 @@ app.post('/login', async (req, res)=>{
 app.listen(port, (err)=>{
     if(!err)
     {
-        console.log("Running"+port);
+        console.log("Running at port "+port);
     }
     else
     {

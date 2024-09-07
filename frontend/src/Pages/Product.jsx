@@ -33,7 +33,7 @@ const Product = () => {
                     >
                       <img
                         style={{ maxWidth: "100%", maxHeight: "auto" }}
-                        className="rounded-4 fit object-cover"
+                        className="rounded-4 fit object-contain"
                         src={product.image}
                       />
                     </a>
