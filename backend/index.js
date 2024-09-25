@@ -1,15 +1,21 @@
 // jaiswalabhay
 // gPI7URPCLP97uvdI
-
+import express from 'express'
+import mongoose from 'mongoose';
+import jwt from 'jsonwebtoken';
+import multer from 'multer';
+import path from 'path';
+import cors from 'cors';
+import { type } from 'os';
 const port = 4000;
-const express = require("express");
 const app = express();
-const mongoose = require("mongoose");
-const jwt = require("jsonwebtoken");
-const multer = require("multer");
-const path = require("path");
-const cors = require("cors");
-const { type } = require("os");
+import { fileURLToPath } from 'url';
+// const mongoose = require("mongoose");
+// const jwt = require("jsonwebtoken");
+// const multer = require("multer");
+// const path = require("path");
+// const cors = require("cors");
+// const { type } = require("os");
 
 app.use(express.json());
 app.use(cors());
@@ -29,7 +35,11 @@ const storage = multer.diskStorage({
 
 const upload = multer({storage: storage})
 
-app.use('/images', express.static(path.join(__dirname, 'upload/images')))
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+app.use('/images', express.static(path.join(__dirname, 'upload/images')));
+
 
 app.post("/upload", upload.single('product'), (req, res)=>{
     res.json({
