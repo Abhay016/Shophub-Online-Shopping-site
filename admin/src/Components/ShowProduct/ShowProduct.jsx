@@ -4,14 +4,14 @@ import './ShowProduct.css'
 const ShowProduct = () => {
   const [allproducts, setallproducts] = useState([]);
   const fetchInfo = async () =>{
-    await fetch('http://localhost:4000/allproducts').then((res)=>res.json()).then((data)=>{
+    await fetch('https://shophub-repo-7.onrender.com/allproducts').then((res)=>res.json()).then((data)=>{
       setallproducts(data)});
   }
   useEffect(()=>{
     fetchInfo();
   },[])
   const remove_product=async(id)=>{
-    await fetch('http://localhost:4000/removeproduct',
+    await fetch('https://shophub-repo-7.onrender.com/removeproduct',
       {
         method: 'POST',
         headers:{

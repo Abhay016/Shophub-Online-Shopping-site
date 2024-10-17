@@ -24,9 +24,9 @@ const AddProduct = () => {
         try {
             let responseData;
             let formData = new FormData();
-            formData.append('product', image); // Use the correct key expected by the backend
+            formData.append('product', image);
 
-            const uploadResponse = await fetch('http://localhost:4000/upload', {
+            const uploadResponse = await fetch('https://shophub-repo-7.onrender.com/upload', {
                 method: 'POST',
                 headers: {
                     Accept: 'application/json',
@@ -39,7 +39,7 @@ const AddProduct = () => {
             if (responseData.success) {
                 let prod = { ...product, image: responseData.image_url };
 
-                const addProductResponse = await fetch('http://localhost:4000/addproduct', {
+                const addProductResponse = await fetch('https://shophub-repo-7.onrender.com/addproduct', {
                     method: 'POST',
                     headers: {
                         Accept: 'application/json',

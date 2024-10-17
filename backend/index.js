@@ -1,5 +1,6 @@
 // jaiswalabhay
 // gPI7URPCLP97uvdI
+
 import express from 'express'
 import mongoose from 'mongoose';
 import jwt from 'jsonwebtoken';
@@ -10,6 +11,7 @@ import { type } from 'os';
 const port = 4000;
 const app = express();
 import { fileURLToPath } from 'url';
+
 // const mongoose = require("mongoose");
 // const jwt = require("jsonwebtoken");
 // const multer = require("multer");
@@ -35,8 +37,8 @@ const storage = multer.diskStorage({
 
 const upload = multer({storage: storage})
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+// const __filename = fileURLToPath(import.meta.url);
+// const __dirname = path.dirname(__filename);
 
 app.use('/images', express.static(path.join(__dirname, 'upload/images')));
 
@@ -44,7 +46,7 @@ app.use('/images', express.static(path.join(__dirname, 'upload/images')));
 app.post("/upload", upload.single('product'), (req, res)=>{
     res.json({
         success: 1, 
-        image_url: `http://localhost:${port}/images/${req.file.filename}`
+        image_url: `https://shophub-repo-7.onrender.com/images/${req.file.filename}`
     })
 })
 
